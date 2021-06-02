@@ -1,0 +1,62 @@
+{
+  "name": "ahj-dom",
+  "version": "1.0.0",
+  "description": "ahj-dom",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
+  "author": "KateYachmeneva",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^4.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "image-loader": "0.0.1",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^26.6.3",
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "terser-webpack-plugin": "^5.0.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1",
+    "webpack-merge": "^5.7.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileMock.js"
+    }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateYachmeneva/ahj-dom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KateYachmeneva/ahj-dom/issues"
+  },
+  "homepage": "https://github.com/KateYachmeneva/ahj-dom#readme"
+}
