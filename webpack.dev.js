@@ -11,6 +11,7 @@ module.exports = merge(common, {
 
   // Spin up a server for quick development
   devServer: {
+    inline: false,
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, '/dist'),
     open: true,
